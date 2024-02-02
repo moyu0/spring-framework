@@ -290,6 +290,17 @@ configure(allprojects) { project ->
 			cacheChangingModulesFor 0, "seconds"
 		}
 		repositories {
+			// 本地仓库位于USER_HOME/.m2/repository
+			mavenLocal()
+			// aliyun镜像 https://help.aliyun.com/document_detail/102512.html	https://developer.aliyun.com/mvn/guide
+			maven { url 'https://maven.aliyun.com/repository/public' }
+			maven { url 'https://maven.aliyun.com/repository/central' }
+			maven { url 'https://maven.aliyun.com/repository/jcenter' }
+			maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+			maven { url 'https://maven.aliyun.com/repository/google' }
+			maven { url 'https://maven.aliyun.com/repository/spring' }
+			maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+
 			mavenCentral()
 			maven { url "https://repo.spring.io/libs-spring-framework-build" }
 		}
